@@ -1,0 +1,52 @@
+name: icloudready
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=3.1.5 <4.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.2
+  intl: ^0.18.1
+  get: 4.6.6
+  flutter: 
+    sdk: flutter
+  flutter_easyloading: ^3.0.5
+  font_awesome_flutter: ^10.6.0
+  auto_size_text_field: ^2.2.2
+  auto_size_text: ^3.0.0
+  path_provider: ^2.1.1
+  hive: ^2.2.3
+  flutter_localizations:
+    sdk: flutter
+
+dev_dependencies: 
+  flutter_lints: ^2.0.0
+  flutter_test: 
+    sdk: flutter
+
+flutter: 
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/fonts/
+
+flutter_intl: 
+  enabled: true
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/poppins-bold.ttf
+          weight: 700
+        - asset: assets/fonts/poppins-semi-bold.ttf
+          weight: 600
+        - asset: assets/fonts/poppins-medium.ttf
+          weight: 500
+        - asset: assets/fonts/poppins-regular.ttf
+          weight: 400
+        - asset: assets/fonts/poppins-light.ttf
+          weight: 300
+
+

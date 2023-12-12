@@ -41,17 +41,20 @@ class CharacterItem extends GetView<HomeController> {
         child: Column(children: [
           Expanded(
               flex: 2,
-              child: ClipRRect(
-                  borderRadius: BorderRadius.circular(AppSize.s8),
-                  child: CachedNetworkImage(
-                    imageUrl: character.image,
-                    placeholder: (context, _) =>
-                        const Center(child: CircularProgressIndicator()),
-                    errorWidget: (context, _, __) =>
-                        Image.asset(ImageAssets.characterError),
-                    fit: BoxFit.cover,
-                    width: double.infinity,
-                  ))),
+              child: Hero(
+                tag: character.id,
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(AppSize.s8),
+                    child: CachedNetworkImage(
+                      imageUrl: character.image,
+                      placeholder: (context, _) =>
+                          const Center(child: CircularProgressIndicator()),
+                      errorWidget: (context, _, __) =>
+                          Image.asset(ImageAssets.characterError),
+                      fit: BoxFit.cover,
+                      width: double.infinity,
+                    )),
+              )),
           const Gap(AppSize.s10),
           Row(
             children: [

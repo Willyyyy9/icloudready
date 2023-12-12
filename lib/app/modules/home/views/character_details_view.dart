@@ -22,8 +22,11 @@ class CharacterDetailView extends GetView<HomeController> {
           return SingleChildScrollView(
             child: Column(
               children: [
-                CharacterDetailImage(
-                    image: controller.selectedCharacter!.image),
+                Hero(
+                  tag: controller.selectedCharacter!.id,
+                  child: CharacterDetailImage(
+                      image: controller.selectedCharacter!.image),
+                ),
                 Padding(
                   padding: const EdgeInsets.all(AppPadding.p16),
                   child: Column(

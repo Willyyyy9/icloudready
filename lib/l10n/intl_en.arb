@@ -1,5 +1,8 @@
 {
     "pleaseEnterValue": "Please Enter Value",
-    "iCloudReady": "ICloud Ready"
+    "iCloudReady": "ICloud Ready",
+    "loading": "Loading",
+    "internalError": "Internal Error"
+
 
 }

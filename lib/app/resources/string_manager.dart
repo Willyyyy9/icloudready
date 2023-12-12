@@ -8,7 +8,9 @@ class AppStrings {
 }
 
 class AppLinks {
-  static const String baseUrl = "https://evergreen-sigma.vercel.app/api/v1";
+  static const String baseUrl = "https://rickandmortyapi.com/api/";
 }
 
-class AttributeStrings {}
+class AttributeStrings {
+  static const String character = "character";
+}

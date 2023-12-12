@@ -1,4 +1,6 @@
 {
     "pleaseEnterValue": "الرجاء إدخال القيمة",
-    "iCloudReady": "اي كلاود ريدي"
+    "iCloudReady": "اي كلاود ريدي",
+    "loading": "جاري التحميل",
+    "internalError": "خطأ في التحميل"
 }

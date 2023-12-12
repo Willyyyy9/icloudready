@@ -19,6 +19,10 @@ dependencies:
   hive: ^2.2.3
   flutter_localizations:
     sdk: flutter
+  dio: ^5.4.0
+  get_it: ^7.6.4
+  cached_network_image: ^3.3.0
+  gap: ^3.0.1
 
 dev_dependencies: 
   flutter_lints: ^2.0.0
@@ -29,7 +33,6 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
-    - assets/icons/
     - assets/fonts/
 
 flutter_intl: 

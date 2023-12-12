@@ -23,6 +23,8 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "iCloudReady": MessageLookupByLibrary.simpleMessage("اي كلاود ريدي"),
+        "internalError": MessageLookupByLibrary.simpleMessage("خطأ في التحميل"),
+        "loading": MessageLookupByLibrary.simpleMessage("جاري التحميل"),
         "pleaseEnterValue":
             MessageLookupByLibrary.simpleMessage("الرجاء إدخال القيمة")
       };

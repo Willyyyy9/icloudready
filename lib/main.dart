@@ -1,5 +1,7 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:hive/hive.dart';
 import 'package:icloudready/app/common/my_app.dart';
 import 'package:icloudready/app/resources/constant_manager.dart';
@@ -13,8 +15,13 @@ Future<Box> openHiveBox(String boxName) async {
   return await Hive.openBox(boxName);
 }
 
+initObjects() async {
+  GetIt.I.registerLazySingleton<Dio>(() => Dio());
+}
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  initObjects();
   await openHiveBox(AppStrings.localeHiveBox);
   AppConstants.configureLoading();
   runApp(MyApp());

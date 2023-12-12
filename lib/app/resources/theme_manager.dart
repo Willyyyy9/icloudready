@@ -24,8 +24,9 @@ ThemeData getApplicationTheme() {
     appBarTheme: AppBarTheme(
         centerTitle: true,
         color: ColorManager.transparent,
+        iconTheme: IconThemeData(color: ColorManager.primary),
         elevation: AppSize.s0,
-        shadowColor: ColorManager.lightGrey,
+        shadowColor: ColorManager.primary.withOpacity(0.3),
         titleTextStyle: getRegularStyle(
           color: ColorManager.black,
           fontSize: FontSize.s16,
@@ -52,15 +53,15 @@ ThemeData getApplicationTheme() {
     //Text Theme
     textTheme: TextTheme(
       displayLarge:
-          getBoldStyle(color: ColorManager.darkGrey, fontSize: FontSize.s16),
+          getBoldStyle(color: ColorManager.primary, fontSize: FontSize.s22),
       headlineMedium:
-          getRegularStyle(color: ColorManager.darkGrey, fontSize: FontSize.s14),
+          getBoldStyle(color: ColorManager.primary, fontSize: FontSize.s18),
       titleMedium:
-          getMediumStyle(color: ColorManager.black, fontSize: FontSize.s16),
-      bodySmall: getRegularStyle(
-        color: ColorManager.grey1,
-      ),
-      bodyLarge: getRegularStyle(color: ColorManager.grey),
+          getBoldStyle(color: ColorManager.primary, fontSize: FontSize.s16),
+      bodySmall:
+          getRegularStyle(color: ColorManager.grey, fontSize: FontSize.s12),
+      bodyMedium:
+          getRegularStyle(color: ColorManager.grey, fontSize: FontSize.s14),
     ),
 
     dialogTheme: DialogTheme(

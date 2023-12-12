@@ -69,6 +69,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Loading`
+  String get loading {
+    return Intl.message(
+      'Loading',
+      name: 'loading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Internal Error`
+  String get internalError {
+    return Intl.message(
+      'Internal Error',
+      name: 'internalError',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

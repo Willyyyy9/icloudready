@@ -36,4 +36,20 @@ class Info {
       prev: json['prev'],
     );
   }
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = {
+      "count": count,
+      "pages": pages,
+    };
+
+    // Handle optional fields (next and prev)
+    if (next != null) {
+      data["next"] = next;
+    }
+    if (prev != null) {
+      data["prev"] = prev;
+    }
+
+    return data;
+  }
 }

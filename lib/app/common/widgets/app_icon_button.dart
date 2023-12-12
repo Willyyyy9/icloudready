@@ -21,7 +21,7 @@ class AppIconButton extends StatelessWidget {
         padding: padding != null ? EdgeInsets.all(padding!) : null,
         icon: Icon(
           icon,
-          color: color ?? Colors.black,
+          color: color ?? Theme.of(context).iconTheme.color,
         ),
         iconSize: iconSize ?? 20,
         onPressed: () {

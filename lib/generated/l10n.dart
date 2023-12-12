@@ -89,6 +89,206 @@ class S {
       args: [],
     );
   }
+
+  /// `Character Details`
+  String get characterDetails {
+    return Intl.message(
+      'Character Details',
+      name: 'characterDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Species`
+  String get species {
+    return Intl.message(
+      'Species',
+      name: 'species',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Type`
+  String get type {
+    return Intl.message(
+      'Type',
+      name: 'type',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gender`
+  String get gender {
+    return Intl.message(
+      'Gender',
+      name: 'gender',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location`
+  String get location {
+    return Intl.message(
+      'Location',
+      name: 'location',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Origin`
+  String get origin {
+    return Intl.message(
+      'Origin',
+      name: 'origin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Light Mode`
+  String get lightMode {
+    return Intl.message(
+      'Light Mode',
+      name: 'lightMode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark Mode`
+  String get darkMode {
+    return Intl.message(
+      'Dark Mode',
+      name: 'darkMode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Character Name`
+  String get characterName {
+    return Intl.message(
+      'Character Name',
+      name: 'characterName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Alive`
+  String get alive {
+    return Intl.message(
+      'Alive',
+      name: 'alive',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dead`
+  String get dead {
+    return Intl.message(
+      'Dead',
+      name: 'dead',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unknown`
+  String get unknown {
+    return Intl.message(
+      'Unknown',
+      name: 'unknown',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Filters`
+  String get filters {
+    return Intl.message(
+      'Filters',
+      name: 'filters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Female`
+  String get female {
+    return Intl.message(
+      'Female',
+      name: 'female',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Male`
+  String get male {
+    return Intl.message(
+      'Male',
+      name: 'male',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Genderless`
+  String get genderless {
+    return Intl.message(
+      'Genderless',
+      name: 'genderless',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Status`
+  String get status {
+    return Intl.message(
+      'Status',
+      name: 'status',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please select a filter or type a name`
+  String get searchError {
+    return Intl.message(
+      'Please select a filter or type a name',
+      name: 'searchError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search for new characters`
+  String get searchForNewCharacters {
+    return Intl.message(
+      'Search for new characters',
+      name: 'searchForNewCharacters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Clear`
+  String get clear {
+    return Intl.message(
+      'Clear',
+      name: 'clear',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

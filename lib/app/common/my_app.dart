@@ -38,11 +38,11 @@ class _MyAppState extends State<MyApp> {
       getPages: AppPages.routes,
       debugShowCheckedModeBanner: false,
       theme: getApplicationTheme(),
+      darkTheme: getDarkApplicationTheme(),
       builder: EasyLoading.init(),
       defaultTransition: Transition.noTransition,
       transitionDuration: const Duration(milliseconds: 0),
       scrollBehavior: AppScrollBehavior(),
-      textDirection: TextDirection.ltr,
     );
   }
 }

@@ -9,13 +9,18 @@ class CharacterList extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeController>(builder: (controller) {
-      return ListView.builder(
-        shrinkWrap: true,
-        controller: controller.characterScrollController,
-        itemCount: controller.characters.length,
-        itemBuilder: (context, index) {
-          return CharacterItem(controller.characters[index]);
+      return RefreshIndicator(
+        onRefresh: () async {
+          await controller.findFirstPage();
         },
+        child: ListView.builder(
+          shrinkWrap: true,
+          controller: controller.characterScrollController,
+          itemCount: controller.characters.length,
+          itemBuilder: (context, index) {
+            return CharacterItem(controller.characters[index]);
+          },
+        ),
       );
     });
   }

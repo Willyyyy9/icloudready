@@ -17,12 +17,13 @@ Future<Box> openHiveBox(String boxName) async {
 
 initObjects() async {
   GetIt.I.registerLazySingleton<Dio>(() => Dio());
+  GetIt.I.registerLazySingleton<Box>(() => Hive.box(AppStrings.localeHiveBox));
 }
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  initObjects();
   await openHiveBox(AppStrings.localeHiveBox);
+  initObjects();
   AppConstants.configureLoading();
   runApp(MyApp());
 }

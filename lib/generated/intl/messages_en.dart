@@ -22,10 +22,33 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "alive": MessageLookupByLibrary.simpleMessage("Alive"),
+        "characterDetails":
+            MessageLookupByLibrary.simpleMessage("Character Details"),
+        "characterName": MessageLookupByLibrary.simpleMessage("Character Name"),
+        "clear": MessageLookupByLibrary.simpleMessage("Clear"),
+        "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+        "dead": MessageLookupByLibrary.simpleMessage("Dead"),
+        "female": MessageLookupByLibrary.simpleMessage("Female"),
+        "filters": MessageLookupByLibrary.simpleMessage("Filters"),
+        "gender": MessageLookupByLibrary.simpleMessage("Gender"),
+        "genderless": MessageLookupByLibrary.simpleMessage("Genderless"),
         "iCloudReady": MessageLookupByLibrary.simpleMessage("ICloud Ready"),
         "internalError": MessageLookupByLibrary.simpleMessage("Internal Error"),
+        "lightMode": MessageLookupByLibrary.simpleMessage("Light Mode"),
         "loading": MessageLookupByLibrary.simpleMessage("Loading"),
+        "location": MessageLookupByLibrary.simpleMessage("Location"),
+        "male": MessageLookupByLibrary.simpleMessage("Male"),
+        "origin": MessageLookupByLibrary.simpleMessage("Origin"),
         "pleaseEnterValue":
-            MessageLookupByLibrary.simpleMessage("Please Enter Value")
+            MessageLookupByLibrary.simpleMessage("Please Enter Value"),
+        "searchError": MessageLookupByLibrary.simpleMessage(
+            "Please select a filter or type a name"),
+        "searchForNewCharacters":
+            MessageLookupByLibrary.simpleMessage("Search for new characters"),
+        "species": MessageLookupByLibrary.simpleMessage("Species"),
+        "status": MessageLookupByLibrary.simpleMessage("Status"),
+        "type": MessageLookupByLibrary.simpleMessage("Type"),
+        "unknown": MessageLookupByLibrary.simpleMessage("Unknown")
       };
 }

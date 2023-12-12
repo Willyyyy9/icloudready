@@ -22,10 +22,33 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "alive": MessageLookupByLibrary.simpleMessage("علي قيد الحياة"),
+        "characterDetails":
+            MessageLookupByLibrary.simpleMessage("تفاصيل الشخصية"),
+        "characterName": MessageLookupByLibrary.simpleMessage("اسم الشخصية"),
+        "clear": MessageLookupByLibrary.simpleMessage("اخلاء"),
+        "darkMode": MessageLookupByLibrary.simpleMessage("الوضع المظلم"),
+        "dead": MessageLookupByLibrary.simpleMessage("ميت"),
+        "female": MessageLookupByLibrary.simpleMessage("انثي"),
+        "filters": MessageLookupByLibrary.simpleMessage("الفلتره"),
+        "gender": MessageLookupByLibrary.simpleMessage("الجنس"),
+        "genderless": MessageLookupByLibrary.simpleMessage("بلا جنس"),
         "iCloudReady": MessageLookupByLibrary.simpleMessage("اي كلاود ريدي"),
         "internalError": MessageLookupByLibrary.simpleMessage("خطأ في التحميل"),
+        "lightMode": MessageLookupByLibrary.simpleMessage("وضع الإضاءة"),
         "loading": MessageLookupByLibrary.simpleMessage("جاري التحميل"),
+        "location": MessageLookupByLibrary.simpleMessage("الموقع"),
+        "male": MessageLookupByLibrary.simpleMessage("ذكر"),
+        "origin": MessageLookupByLibrary.simpleMessage("الاصل"),
         "pleaseEnterValue":
-            MessageLookupByLibrary.simpleMessage("الرجاء إدخال القيمة")
+            MessageLookupByLibrary.simpleMessage("الرجاء إدخال القيمة"),
+        "searchError": MessageLookupByLibrary.simpleMessage(
+            "الرجاء تحديد فلتر أو كتابة اسم"),
+        "searchForNewCharacters":
+            MessageLookupByLibrary.simpleMessage("البحث عن شخصيات جديدة"),
+        "species": MessageLookupByLibrary.simpleMessage("صِنف"),
+        "status": MessageLookupByLibrary.simpleMessage("الحالة"),
+        "type": MessageLookupByLibrary.simpleMessage("النوع"),
+        "unknown": MessageLookupByLibrary.simpleMessage("غير معروف")
       };
 }

@@ -55,7 +55,7 @@ class AppButton extends StatelessWidget {
             backgroundColor:
                 MaterialStateProperty.all(color ?? ColorManager.primary)),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(AppPadding.p4),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,

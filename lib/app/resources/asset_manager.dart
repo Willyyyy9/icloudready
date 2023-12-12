@@ -7,6 +7,8 @@ const String soundPath = "sound/";
 class ImageAssets {
   static const String character = '${imagePath}character.jpg';
   static const String characterError = '${imagePath}charactererror.png';
+  static const String error = '${imagePath}error.png';
+  static const String search = '${imagePath}search.png';
 }
 
 class IconAssets {}

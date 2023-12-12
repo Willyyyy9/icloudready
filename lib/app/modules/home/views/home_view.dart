@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:icloudready/app/modules/home/views/widgets/list/character_list.dart';
-import 'package:icloudready/app/modules/home/views/widgets/locale/home_locale_button.dart';
+import 'package:icloudready/app/modules/home/views/widgets/search/home_search_button.dart';
+import 'package:icloudready/app/modules/home/views/widgets/settings/home_settings_button.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -13,13 +14,11 @@ class HomeView extends GetView<HomeController> {
         appBar: AppBar(
           title: GetBuilder<HomeController>(builder: (controller) {
             return Text(
-              controller.characters.isEmpty
-                  ? ""
-                  : "${controller.characters.length} / ${controller.characterResponse.info.count}",
-              style: Theme.of(context).textTheme.titleMedium,
+              controller.characters.isEmpty ? "" : controller.characterCount(),
+              style: Theme.of(context).textTheme.titleSmall,
             );
           }),
-          actions: const [HomeLocaleButton()],
+          actions: const [HomeSettingsButton(), HomeSearchButton()],
         ),
         body: const CharacterList());
   }

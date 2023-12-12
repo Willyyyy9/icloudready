@@ -2,7 +2,25 @@
     "pleaseEnterValue": "Please Enter Value",
     "iCloudReady": "ICloud Ready",
     "loading": "Loading",
-    "internalError": "Internal Error"
-
-
+    "internalError": "Internal Error",
+    "characterDetails": "Character Details",
+    "species": "Species",
+    "type": "Type",
+    "gender": "Gender",
+    "location": "Location",
+    "origin": "Origin",
+    "lightMode": "Light Mode",
+    "darkMode": "Dark Mode",
+    "characterName": "Character Name",
+    "alive": "Alive",
+    "dead": "Dead",
+    "unknown": "Unknown",
+    "filters": "Filters",
+    "female": "Female",
+    "male": "Male",
+    "genderless": "Genderless",
+    "status": "Status",
+    "searchError": "Please select a filter or type a name",
+    "searchForNewCharacters": "Search for new characters",
+    "clear": "Clear"
 }

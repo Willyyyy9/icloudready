@@ -44,6 +44,23 @@ class Character {
       created: json['created'],
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      "id": id,
+      "name": name,
+      "status": status,
+      "species": species,
+      "type": type,
+      "gender": gender,
+      "origin": origin.toJson(),
+      "location": location.toJson(),
+      "image": image,
+      "episode": episode,
+      "url": url,
+      "created": created,
+    };
+  }
 }
 
 class Origin {
@@ -58,6 +75,12 @@ class Origin {
       url: json['url'],
     );
   }
+  Map<String, dynamic> toJson() {
+    return {
+      "name": name,
+      "url": url,
+    };
+  }
 }
 
 class Location {
@@ -71,5 +94,11 @@ class Location {
       name: json['name'],
       url: json['url'],
     );
+  }
+  Map<String, dynamic> toJson() {
+    return {
+      "name": name,
+      "url": url,
+    };
   }
 }

@@ -22,7 +22,7 @@ class AppStrings {
 
 class AppLinks {
   // static const String baseUrl = "https://rickandmortyapi.com/api/";
-  static const String baseUrl = "http://192.168.100.9:3000/";
+  static const String baseUrl = "http://LOCALHOST:PORT/";
 }
 
 class AttributeStrings {

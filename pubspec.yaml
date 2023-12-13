@@ -2,14 +2,14 @@ name: icloudready
 version: 1.0.0+1
 publish_to: none
 description: A new Flutter project.
-environment: 
-  sdk: '>=3.1.5 <4.0.0'
+environment:
+  sdk: ">=3.1.5 <4.0.0"
 
-dependencies: 
+dependencies:
   cupertino_icons: ^1.0.2
   intl: ^0.18.1
   get: 4.6.6
-  flutter: 
+  flutter:
     sdk: flutter
   flutter_easyloading: ^3.0.5
   font_awesome_flutter: ^10.6.0
@@ -26,18 +26,26 @@ dependencies:
   full_screen_image: ^2.0.0
   url_launcher: ^6.2.2
 
-dev_dependencies: 
+dev_dependencies:
+  flutter_launcher_icons: "^0.13.1"
   flutter_lints: ^2.0.0
-  flutter_test: 
+  flutter_test:
     sdk: flutter
 
-flutter: 
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/icloudready.png"
+  min_sdk_android: 21 
+  
+
+flutter:
   uses-material-design: true
   assets:
     - assets/images/
     - assets/fonts/
 
-flutter_intl: 
+flutter_intl:
   enabled: true
 
   fonts:
@@ -53,5 +61,3 @@ flutter_intl:
           weight: 400
         - asset: assets/fonts/poppins-light.ttf
           weight: 300
-
-

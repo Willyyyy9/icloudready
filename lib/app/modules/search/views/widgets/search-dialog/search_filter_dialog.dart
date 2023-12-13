@@ -38,7 +38,7 @@ class SearchFilterDialog extends GetView<SearchGetController> {
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
-              children: controller.genderFilters.map((genderFilter) {
+              children: controller.typeFilters.map((genderFilter) {
                 return SearchGenderFilterItem(genderFilter);
               }).toList(),
             ),

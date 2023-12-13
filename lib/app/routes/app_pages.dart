@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:icloudready/app/modules/home/views/character_details_view.dart';
+import 'package:icloudready/app/modules/home/views/property_details_view.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
@@ -23,7 +23,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.CHARACTER_DETAIL,
-      page: () => const CharacterDetailView(),
+      page: () => const PropertyDetailView(),
       binding: HomeBinding(),
     ),
     GetPage(

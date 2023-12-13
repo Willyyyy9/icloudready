@@ -22,13 +22,17 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "address": MessageLookupByLibrary.simpleMessage("Address"),
         "alive": MessageLookupByLibrary.simpleMessage("Alive"),
+        "apartment": MessageLookupByLibrary.simpleMessage("Apartment"),
+        "area": MessageLookupByLibrary.simpleMessage("Area"),
         "characterDetails":
             MessageLookupByLibrary.simpleMessage("Character Details"),
         "characterName": MessageLookupByLibrary.simpleMessage("Character Name"),
         "clear": MessageLookupByLibrary.simpleMessage("Clear"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "dead": MessageLookupByLibrary.simpleMessage("Dead"),
+        "egyptianPound": MessageLookupByLibrary.simpleMessage("Egyptian Pound"),
         "female": MessageLookupByLibrary.simpleMessage("Female"),
         "filters": MessageLookupByLibrary.simpleMessage("Filters"),
         "gender": MessageLookupByLibrary.simpleMessage("Gender"),
@@ -39,16 +43,28 @@ class MessageLookup extends MessageLookupByLibrary {
         "loading": MessageLookupByLibrary.simpleMessage("Loading"),
         "location": MessageLookupByLibrary.simpleMessage("Location"),
         "male": MessageLookupByLibrary.simpleMessage("Male"),
+        "meterSquared": MessageLookupByLibrary.simpleMessage("Meter Squared"),
+        "numberOfBathrooms":
+            MessageLookupByLibrary.simpleMessage("Number of Bathrooms"),
+        "numberOfBedrooms":
+            MessageLookupByLibrary.simpleMessage("Number of Bedrooms"),
         "origin": MessageLookupByLibrary.simpleMessage("Origin"),
         "pleaseEnterValue":
             MessageLookupByLibrary.simpleMessage("Please Enter Value"),
+        "price": MessageLookupByLibrary.simpleMessage("Price"),
+        "propertyDetails":
+            MessageLookupByLibrary.simpleMessage("Property Details"),
+        "rent": MessageLookupByLibrary.simpleMessage("Rent"),
+        "sale": MessageLookupByLibrary.simpleMessage("Sale"),
         "searchError": MessageLookupByLibrary.simpleMessage(
             "Please select a filter or type a name"),
         "searchForNewCharacters":
             MessageLookupByLibrary.simpleMessage("Search for new characters"),
         "species": MessageLookupByLibrary.simpleMessage("Species"),
         "status": MessageLookupByLibrary.simpleMessage("Status"),
+        "studio": MessageLookupByLibrary.simpleMessage("Studio"),
         "type": MessageLookupByLibrary.simpleMessage("Type"),
-        "unknown": MessageLookupByLibrary.simpleMessage("Unknown")
+        "unknown": MessageLookupByLibrary.simpleMessage("Unknown"),
+        "villa": MessageLookupByLibrary.simpleMessage("Villa")
       };
 }

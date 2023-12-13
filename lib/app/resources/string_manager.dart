@@ -13,17 +13,26 @@ class AppStrings {
   static const String female = "Female";
   static const String genderless = "Genderless";
   static const String unknown = "Unknown";
+  static const String sale = "Sale";
+  static const String rent = "Rent";
+  static const String villa = "Villa";
+  static const String studio = "Studio";
+  static const String apartment = "Apartment";
 }
 
 class AppLinks {
-  static const String baseUrl = "https://rickandmortyapi.com/api/";
+  // static const String baseUrl = "https://rickandmortyapi.com/api/";
+  static const String baseUrl = "http://192.168.100.9:3000/";
 }
 
 class AttributeStrings {
-  static const String character = "character";
-  static const String characters = "characters";
-  static const String info = "info";
+  // static const String character = "character";
+  // static const String characters = "characters";
+  static const String properties = "properties";
+  static const String propertyData = "propertyData";
+  // static const String info = "info";
   static const String status = "status";
-  static const String gender = "gender";
+  static const String type = "type";
+  // static const String gender = "gender";
   static const String name = "name";
 }

@@ -9,25 +9,27 @@ import 'package:hive/hive.dart';
 import 'package:icloudready/app/controllers/locale_controller.dart';
 import 'package:icloudready/app/modules/home/models/character.dart';
 import 'package:icloudready/app/modules/home/models/character_response.dart';
+import 'package:icloudready/app/modules/home/models/property.dart';
+import 'package:icloudready/app/modules/home/models/property_response.dart';
 import 'package:icloudready/app/modules/home/network/home_network.dart';
 import 'package:icloudready/app/resources/string_manager.dart';
 import 'package:icloudready/generated/l10n.dart';
 
 class HomeController extends GetxController {
   LocaleController localeController = Get.find<LocaleController>();
-  ScrollController characterScrollController = ScrollController();
-  late CharacterResponse characterResponse;
-  List<Character> characters = [];
+  ScrollController propertiesScrollController = ScrollController();
+  late PropertyData propertyData;
+  List<Property> properties = [];
   String? nextPageUrl;
   bool hasNextPageBeenCalled = false;
-  Character? selectedCharacter;
+  Property? selectedProperty;
   final Box hive = GetIt.I<Box>();
 
   String characterCount() {
     if (Get.locale == const Locale("en")) {
-      return "${characters.length} / ${characterResponse.info.count}";
+      return "${properties.length} / ${propertyData.totalCount}";
     } else {
-      return "${replaceArabicNumber(characters.length.toString())} / ${replaceArabicNumber(characterResponse.info.count.toString())}";
+      return "${replaceArabicNumber(properties.length.toString())} / ${replaceArabicNumber(propertyData.totalCount.toString())}";
     }
   }
 
@@ -44,33 +46,31 @@ class HomeController extends GetxController {
 
   cacheCharacters() {
     //Cache Characters List
-    List<Map<String, dynamic>> charactersMapList =
-        characters.map((e) => e.toJson()).toList();
-    String characterJsonString = jsonEncode(charactersMapList);
-    hive.put(AttributeStrings.characters, characterJsonString);
+    List<Map<String, dynamic>> propertiesMapList =
+        properties.map((e) => e.toJson()).toList();
+    String characterJsonString = jsonEncode(propertiesMapList);
+    hive.put(AttributeStrings.properties, characterJsonString);
 
     //Cache Character Info
-    String characterResponseInfo = jsonEncode(characterResponse.info.toJson());
-    hive.put(AttributeStrings.info, characterResponseInfo);
+    String characterResponseInfo = jsonEncode(propertyData.toJson());
+    hive.put(AttributeStrings.propertyData, characterResponseInfo);
   }
 
-  getCachedCharacters(
-      dynamic charactersJsonMap, dynamic charactersInfoJsonMap) {
-    List characterDecodedData = jsonDecode(charactersJsonMap);
-    dynamic characterInfoDecodedData = jsonDecode(charactersInfoJsonMap);
-    characters =
-        characterDecodedData.map((e) => Character.fromJson(e)).toList();
-    Info info = Info.fromJson(characterInfoDecodedData);
-    characterResponse = CharacterResponse(info: info, characters: characters);
-    nextPageUrl = info.next;
+  getCachedCharacters(dynamic propertiesJsonMap, dynamic propertyDataJsonMap) {
+    List propertiesDecodedData = jsonDecode(propertiesJsonMap);
+    dynamic propertDataDecodedData = jsonDecode(propertyDataJsonMap);
+    properties =
+        propertiesDecodedData.map((e) => Property.fromJson(e)).toList();
+    propertyData = PropertyData.fromJson(propertDataDecodedData);
+    nextPageUrl = propertyData.nextUrl;
     update();
   }
 
   getCharacters() {
-    dynamic charactersJsonMap = hive.get(AttributeStrings.characters);
-    dynamic charactersInfoJsonMap = hive.get(AttributeStrings.info);
-    if (charactersJsonMap != null && charactersInfoJsonMap != null) {
-      getCachedCharacters(charactersJsonMap, charactersInfoJsonMap);
+    dynamic propertiesJsonMap = hive.get(AttributeStrings.properties);
+    dynamic propertyDataJsonMap = hive.get(AttributeStrings.propertyData);
+    if (propertiesJsonMap != null && propertyDataJsonMap != null) {
+      getCachedCharacters(propertiesJsonMap, propertyDataJsonMap);
     } else {
       findFirstPage();
     }
@@ -79,16 +79,18 @@ class HomeController extends GetxController {
   Future findFirstPage() async {
     try {
       EasyLoading.show(status: S.current.loading);
-      characters.clear();
+      properties.clear();
       final response = await HomeNetwork()
-          .find(AppLinks.baseUrl + AttributeStrings.character);
-      characterResponse = CharacterResponse.fromJson(response);
-      nextPageUrl = characterResponse.info.next;
-      characters.addAll(characterResponse.characters);
+          .find(AppLinks.baseUrl + AttributeStrings.properties);
+      propertyData = PropertyData.fromJson(response);
+      nextPageUrl = propertyData.nextUrl;
+      properties.addAll(propertyData.data);
       EasyLoading.dismiss();
       cacheCharacters();
       update();
     } on DioException catch (e) {
+      print(e);
+
       EasyLoading.dismiss();
       EasyLoading.showError(e.message.toString());
     } catch (e) {
@@ -102,13 +104,14 @@ class HomeController extends GetxController {
       try {
         hasNextPageBeenCalled = true;
         final response = await HomeNetwork().find(nextPageUrl.toString());
-        characterResponse = CharacterResponse.fromJson(response);
-        nextPageUrl = characterResponse.info.next;
-        characters.addAll(characterResponse.characters);
+        propertyData = PropertyData.fromJson(response);
+        nextPageUrl = propertyData.nextUrl;
+        properties.addAll(propertyData.data);
         cacheCharacters();
         hasNextPageBeenCalled = false;
         update();
       } on DioException catch (e) {
+        print(e);
         EasyLoading.dismiss();
         EasyLoading.showError(e.message.toString());
       } catch (e) {
@@ -122,9 +125,9 @@ class HomeController extends GetxController {
   void onInit() async {
     super.onInit();
     await getCharacters();
-    characterScrollController.addListener(() async {
-      double maxScroll = characterScrollController.position.maxScrollExtent;
-      double currentScroll = characterScrollController.position.pixels;
+    propertiesScrollController.addListener(() async {
+      double maxScroll = propertiesScrollController.position.maxScrollExtent;
+      double currentScroll = propertiesScrollController.position.pixels;
       double delta = 200.0;
       if (maxScroll - currentScroll <= delta) {
         if (!hasNextPageBeenCalled) {

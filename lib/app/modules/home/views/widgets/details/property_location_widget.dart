@@ -8,8 +8,8 @@ import 'package:icloudready/app/resources/color_manager.dart';
 import 'package:icloudready/app/resources/value_manager.dart';
 import 'package:icloudready/generated/l10n.dart';
 
-class CharacterLocationWidget extends GetView<HomeController> {
-  const CharacterLocationWidget({super.key});
+class PropertyLocationWidget extends GetView<HomeController> {
+  const PropertyLocationWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,17 +38,25 @@ class CharacterLocationWidget extends GetView<HomeController> {
             ),
             const Gap(AppSize.s16),
             AutoSizeText(
-              S.current.origin.toUpperCase(),
+              S.current.address.toUpperCase(),
               style: Theme.of(context).textTheme.bodySmall,
             ),
-            AutoSizeText(controller.selectedCharacter!.origin.name,
+            AutoSizeText(controller.selectedProperty!.address,
                 style: Theme.of(context).textTheme.displayLarge),
             const Gap(AppSize.s16),
             AutoSizeText(
-              S.current.location.toUpperCase(),
+              S.current.numberOfBedrooms.toUpperCase(),
               style: Theme.of(context).textTheme.bodySmall,
             ),
-            AutoSizeText(controller.selectedCharacter!.location.name,
+            AutoSizeText(controller.selectedProperty!.numberOfRooms.toString(),
+                style: Theme.of(context).textTheme.displayLarge),
+            const Gap(AppSize.s16),
+            AutoSizeText(
+              S.current.numberOfBathrooms.toUpperCase(),
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
+            AutoSizeText(
+                controller.selectedProperty!.numberOfBathrooms.toString(),
                 style: Theme.of(context).textTheme.displayLarge),
           ],
         ),

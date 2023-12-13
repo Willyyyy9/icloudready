@@ -4,8 +4,8 @@ import 'package:full_screen_image/full_screen_image.dart';
 import 'package:icloudready/app/resources/asset_manager.dart';
 import 'package:icloudready/app/resources/value_manager.dart';
 
-class CharacterDetailImage extends StatelessWidget {
-  const CharacterDetailImage({super.key, required this.image});
+class PropertyDetailImage extends StatelessWidget {
+  const PropertyDetailImage({super.key, required this.image});
   final String image;
 
   @override

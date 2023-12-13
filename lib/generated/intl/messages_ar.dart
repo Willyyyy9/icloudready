@@ -22,13 +22,17 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "address": MessageLookupByLibrary.simpleMessage("العنوان"),
         "alive": MessageLookupByLibrary.simpleMessage("علي قيد الحياة"),
+        "apartment": MessageLookupByLibrary.simpleMessage("شقة"),
+        "area": MessageLookupByLibrary.simpleMessage("المساحة"),
         "characterDetails":
             MessageLookupByLibrary.simpleMessage("تفاصيل الشخصية"),
         "characterName": MessageLookupByLibrary.simpleMessage("اسم الشخصية"),
         "clear": MessageLookupByLibrary.simpleMessage("اخلاء"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع المظلم"),
         "dead": MessageLookupByLibrary.simpleMessage("ميت"),
+        "egyptianPound": MessageLookupByLibrary.simpleMessage("جنيه مصري"),
         "female": MessageLookupByLibrary.simpleMessage("انثي"),
         "filters": MessageLookupByLibrary.simpleMessage("الفلتره"),
         "gender": MessageLookupByLibrary.simpleMessage("الجنس"),
@@ -39,16 +43,28 @@ class MessageLookup extends MessageLookupByLibrary {
         "loading": MessageLookupByLibrary.simpleMessage("جاري التحميل"),
         "location": MessageLookupByLibrary.simpleMessage("الموقع"),
         "male": MessageLookupByLibrary.simpleMessage("ذكر"),
+        "meterSquared": MessageLookupByLibrary.simpleMessage("متر مربع"),
+        "numberOfBathrooms":
+            MessageLookupByLibrary.simpleMessage("عدد الحمامات"),
+        "numberOfBedrooms":
+            MessageLookupByLibrary.simpleMessage("عدد غرف النوم"),
         "origin": MessageLookupByLibrary.simpleMessage("الاصل"),
         "pleaseEnterValue":
             MessageLookupByLibrary.simpleMessage("الرجاء إدخال القيمة"),
+        "price": MessageLookupByLibrary.simpleMessage("السعر"),
+        "propertyDetails":
+            MessageLookupByLibrary.simpleMessage("تفاصيل الوحدة"),
+        "rent": MessageLookupByLibrary.simpleMessage("للايجار"),
+        "sale": MessageLookupByLibrary.simpleMessage("للبيع"),
         "searchError": MessageLookupByLibrary.simpleMessage(
             "الرجاء تحديد فلتر أو كتابة اسم"),
         "searchForNewCharacters":
             MessageLookupByLibrary.simpleMessage("البحث عن شخصيات جديدة"),
         "species": MessageLookupByLibrary.simpleMessage("صِنف"),
         "status": MessageLookupByLibrary.simpleMessage("الحالة"),
+        "studio": MessageLookupByLibrary.simpleMessage("ستوديو"),
         "type": MessageLookupByLibrary.simpleMessage("النوع"),
-        "unknown": MessageLookupByLibrary.simpleMessage("غير معروف")
+        "unknown": MessageLookupByLibrary.simpleMessage("غير معروف"),
+        "villa": MessageLookupByLibrary.simpleMessage("فيلا")
       };
 }

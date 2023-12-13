@@ -7,20 +7,21 @@ import 'package:get/get.dart';
 import 'package:icloudready/app/common/widgets/app_icon_button.dart';
 import 'package:icloudready/app/modules/home/controllers/home_controller.dart';
 import 'package:icloudready/app/modules/home/models/character.dart';
+import 'package:icloudready/app/modules/home/models/property.dart';
 import 'package:icloudready/app/resources/asset_manager.dart';
 import 'package:icloudready/app/resources/color_manager.dart';
 import 'package:icloudready/app/resources/value_manager.dart';
 import 'package:icloudready/app/routes/app_pages.dart';
 
-class CharacterItem extends GetView<HomeController> {
-  const CharacterItem(this.character, {super.key});
-  final Character character;
+class PropertyItem extends GetView<HomeController> {
+  const PropertyItem(this.character, {super.key});
+  final Property character;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        controller.selectedCharacter = character;
+        controller.selectedProperty = character;
         Get.toNamed(Routes.CHARACTER_DETAIL);
       },
       child: Container(
@@ -79,7 +80,7 @@ class CharacterItem extends GetView<HomeController> {
                       : FontAwesomeIcons.circleArrowLeft,
                   color: ColorManager.primary,
                   onTap: () {
-                    controller.selectedCharacter = character;
+                    controller.selectedProperty = character;
                     Get.toNamed(Routes.CHARACTER_DETAIL);
                   })
             ],

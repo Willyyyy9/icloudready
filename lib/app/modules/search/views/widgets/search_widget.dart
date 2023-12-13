@@ -79,7 +79,7 @@ class SearchWidget extends GetView<SearchGetController> {
                         ],
                       ),
                     ),
-                  if (controller.selectedGenderFilterValue != null)
+                  if (controller.selectedTypeFilterValue != null)
                     Container(
                       padding: const EdgeInsets.all(AppPadding.p8),
                       margin: const EdgeInsets.all(AppMargin.m4),
@@ -90,7 +90,7 @@ class SearchWidget extends GetView<SearchGetController> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(
-                            controller.selectedGenderFilterValue!.title,
+                            controller.selectedTypeFilterValue!.title,
                             style: Theme.of(context).textTheme.titleSmall,
                           ),
                           const Gap(AppSize.s10),

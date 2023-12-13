@@ -4,6 +4,7 @@
     "loading": "Loading",
     "internalError": "Internal Error",
     "characterDetails": "Character Details",
+    "propertyDetails": "Property Details",
     "species": "Species",
     "type": "Type",
     "gender": "Gender",
@@ -22,5 +23,17 @@
     "status": "Status",
     "searchError": "Please select a filter or type a name",
     "searchForNewCharacters": "Search for new characters",
-    "clear": "Clear"
+    "clear": "Clear",
+    "area": "Area",
+    "meterSquared": "Meter Squared",
+    "egyptianPound": "Egyptian Pound",
+    "price": "Price",
+    "address": "Address",
+    "numberOfBedrooms": "Number of Bedrooms",
+    "numberOfBathrooms": "Number of Bathrooms",
+    "sale": "Sale",
+    "rent": "Rent",
+    "villa": "Villa",
+    "apartment": "Apartment",
+    "studio": "Studio"
 }

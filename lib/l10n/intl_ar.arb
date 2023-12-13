@@ -4,6 +4,7 @@
     "loading": "جاري التحميل",
     "internalError": "خطأ في التحميل",
     "characterDetails": "تفاصيل الشخصية",
+    "propertyDetails": "تفاصيل الوحدة",
     "species": "صِنف",
     "type": "النوع",
     "gender": "الجنس",
@@ -22,5 +23,17 @@
     "genderless": "بلا جنس",
     "searchError": "الرجاء تحديد فلتر أو كتابة اسم",
     "searchForNewCharacters": "البحث عن شخصيات جديدة",
-    "clear": "اخلاء"
+    "clear": "اخلاء",
+    "area": "المساحة",
+    "meterSquared": "متر مربع",
+    "egyptianPound": "جنيه مصري",
+    "price": "السعر",
+    "address": "العنوان",
+    "numberOfBedrooms": "عدد غرف النوم",
+    "numberOfBathrooms": "عدد الحمامات",
+    "sale": "للبيع",
+    "rent": "للايجار",
+    "villa": "فيلا",
+    "apartment": "شقة",
+    "studio": "ستوديو"
 }

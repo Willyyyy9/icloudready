@@ -6,6 +6,7 @@ class HomeNetwork {
 
   Future<Map<String, dynamic>> find(String url) async {
     try {
+      print(url);
       var response = await dio.get(
         url,
       );

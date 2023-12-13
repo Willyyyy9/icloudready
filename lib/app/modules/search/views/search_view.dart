@@ -2,7 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:icloudready/app/common/widgets/app_button.dart';
-import 'package:icloudready/app/modules/home/views/widgets/list/character_item.dart';
+import 'package:icloudready/app/modules/home/views/widgets/list/property_item.dart';
 import 'package:icloudready/app/modules/search/controllers/search_controller.dart';
 import 'package:icloudready/app/modules/search/views/widgets/search_widget.dart';
 import 'package:icloudready/app/resources/asset_manager.dart';
@@ -35,7 +35,7 @@ class SearchView extends GetView<SearchGetController> {
               const SearchWidget(),
               Expanded(child: GetBuilder<SearchGetController>(
                 builder: (controller) {
-                  if (controller.filteredCharacters.isEmpty) {
+                  if (controller.filteredProperties.isEmpty) {
                     return SingleChildScrollView(
                       child: Column(
                         children: [
@@ -50,10 +50,10 @@ class SearchView extends GetView<SearchGetController> {
                   } else {
                     return ListView.builder(
                       controller: controller.filterCharacterScrollController,
-                      itemCount: controller.filteredCharacters.length,
+                      itemCount: controller.filteredProperties.length,
                       itemBuilder: (context, index) {
-                        return CharacterItem(
-                            controller.filteredCharacters[index]);
+                        return PropertyItem(
+                            controller.filteredProperties[index]);
                       },
                     );
                   }

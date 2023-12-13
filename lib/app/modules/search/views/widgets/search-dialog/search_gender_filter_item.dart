@@ -14,14 +14,14 @@ class SearchGenderFilterItem extends GetView<SearchGetController> {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<SearchGetController>(builder: (controller) {
-      bool isSelected = controller.selectedGenderFilterValue != null &&
-          controller.selectedGenderFilterValue!.value == statusFilter.value;
+      bool isSelected = controller.selectedTypeFilterValue != null &&
+          controller.selectedTypeFilterValue!.value == statusFilter.value;
       return InkWell(
         onTap: () {
           if (isSelected) {
-            controller.selectedGenderFilterValue = null;
+            controller.selectedTypeFilterValue = null;
           } else {
-            controller.selectedGenderFilterValue = statusFilter;
+            controller.selectedTypeFilterValue = statusFilter;
           }
           controller.update();
         },

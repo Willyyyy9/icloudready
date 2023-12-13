@@ -26,7 +26,7 @@ class CharacterDetailWidget extends GetView<HomeController> {
               children: [
                 Expanded(
                   child: AutoSizeText(
-                    S.current.characterDetails,
+                    S.current.propertyDetails,
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                 ),
@@ -38,14 +38,14 @@ class CharacterDetailWidget extends GetView<HomeController> {
             ),
             const Gap(AppSize.s16),
             AutoSizeText(
-              S.current.species.toUpperCase(),
+              S.current.area.toUpperCase(),
               style: Theme.of(context).textTheme.bodySmall,
             ),
             AutoSizeText(
-              controller.selectedCharacter!.species,
+              "${controller.selectedProperty!.area} ${S.current.meterSquared}",
               style: Theme.of(context).textTheme.displayLarge,
             ),
-            if (controller.selectedCharacter!.type.isNotEmpty)
+            if (controller.selectedProperty!.type.isNotEmpty)
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -55,18 +55,18 @@ class CharacterDetailWidget extends GetView<HomeController> {
                     style: Theme.of(context).textTheme.bodySmall,
                   ),
                   AutoSizeText(
-                    controller.selectedCharacter!.type,
+                    controller.selectedProperty!.type,
                     style: Theme.of(context).textTheme.displayLarge,
                   ),
                 ],
               ),
             const Gap(AppSize.s16),
             AutoSizeText(
-              S.current.gender.toUpperCase(),
+              S.current.price.toUpperCase(),
               style: Theme.of(context).textTheme.bodySmall,
             ),
             AutoSizeText(
-              controller.selectedCharacter!.gender,
+              "${controller.selectedProperty!.price} ${S.current.egyptianPound}",
               style: Theme.of(context).textTheme.displayLarge,
             ),
           ],

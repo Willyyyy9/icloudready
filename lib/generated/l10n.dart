@@ -100,6 +100,16 @@ class S {
     );
   }
 
+  /// `Property Details`
+  String get propertyDetails {
+    return Intl.message(
+      'Property Details',
+      name: 'propertyDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Species`
   String get species {
     return Intl.message(
@@ -285,6 +295,126 @@ class S {
     return Intl.message(
       'Clear',
       name: 'clear',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Area`
+  String get area {
+    return Intl.message(
+      'Area',
+      name: 'area',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Meter Squared`
+  String get meterSquared {
+    return Intl.message(
+      'Meter Squared',
+      name: 'meterSquared',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Egyptian Pound`
+  String get egyptianPound {
+    return Intl.message(
+      'Egyptian Pound',
+      name: 'egyptianPound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Price`
+  String get price {
+    return Intl.message(
+      'Price',
+      name: 'price',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address`
+  String get address {
+    return Intl.message(
+      'Address',
+      name: 'address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Number of Bedrooms`
+  String get numberOfBedrooms {
+    return Intl.message(
+      'Number of Bedrooms',
+      name: 'numberOfBedrooms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Number of Bathrooms`
+  String get numberOfBathrooms {
+    return Intl.message(
+      'Number of Bathrooms',
+      name: 'numberOfBathrooms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sale`
+  String get sale {
+    return Intl.message(
+      'Sale',
+      name: 'sale',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rent`
+  String get rent {
+    return Intl.message(
+      'Rent',
+      name: 'rent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Villa`
+  String get villa {
+    return Intl.message(
+      'Villa',
+      name: 'villa',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apartment`
+  String get apartment {
+    return Intl.message(
+      'Apartment',
+      name: 'apartment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Studio`
+  String get studio {
+    return Intl.message(
+      'Studio',
+      name: 'studio',
       desc: '',
       args: [],
     );

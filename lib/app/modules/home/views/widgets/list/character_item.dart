@@ -34,7 +34,7 @@ class CharacterItem extends GetView<HomeController> {
                 color: Colors.grey.withOpacity(0.5),
                 spreadRadius: 0,
                 blurRadius: 1,
-                offset: const Offset(0, 0), // changes position of shadow
+                offset: const Offset(0, 0),
               ),
             ],
             borderRadius: BorderRadius.circular(AppSize.s10)),
